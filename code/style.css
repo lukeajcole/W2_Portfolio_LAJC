@@ -14,7 +14,7 @@
 }
 
 /* Shrink font size for smaller screens */
-@media screen and (max-width:425px) {
+@media screen and (max-width:510px) {
 * {
     font-size: 12px;
     }
@@ -25,52 +25,62 @@
     background-color: var(--dark-color);
     display: flex;
     flex-direction: row;
-    text-align: center;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
 
 /* Main heading inside header */
 .header h1 {
-    display:inline-block;
-    text-align: left;
-    min-width: 130px;
-    max-width: 260px;
-    margin: 1%;
-    height: 200%;
+    white-space: nowrap;
+    height: 100%;
     color: var(--dark-color);
     border: 6px solid var(--accent-color);
     background-color: var(--primary-color);
-    width: auto;
+    /* width: auto; */
     padding: 5px;
+    text-align: center;
+}
+
+.header img {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    border: 6px solid var(--accent-color);
+    align-self: center;
 }
 
 /* Navigation block inside header */
 .nav {
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
     margin: 1%;
-    flex: 0 0 75%;
+    width: auto;
 }
 
 /* Drop the nav block below the heading and center it when the screen shrinks */
-@media screen and (max-width:1248px) {
+@media screen and (max-width:1250px) {
     .nav {
+        justify-content: center;
+    }
+    .header{
+        flex-direction: column;
+        align-content: center;
         justify-content: center;
     }
 }
 
 /* Sme properties for the nav links themselves */
 .nav .link {
-    margin: 0.5%;
+    margin: 2%;
     color: var(--light-color);
     font-weight: bold;
     text-decoration: none;
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 /* Undeline the links when hovered over */
@@ -96,7 +106,6 @@
     flex-wrap: nowrap;
     /* min-width: 75%; */
 }
-
 /* Unique settings for the about me text area */
 #about-me {
     flex: 0 0 50%;
@@ -104,7 +113,9 @@
     display: flex;
     margin: 8px;
     max-width: 72%;
+    background-image: url("..\images\Luke-Kate-Wedding-0513-Right.jpg");
 }
+
 
 /* Defines the Project blocks within the work content item */
 .project{
@@ -163,7 +174,7 @@
 /* Defines the block of linked image for the featured project*/
 #featured-project{
     flex: 1 1 72%;
-    max-width: 72%; 
+    max-width: 100%; 
 }
 
 /* Create the image for the featured project */
@@ -259,12 +270,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
-
-body, html{
-	height: 100%;
-	padding: 0;
-	margin: 0;
-}
 #contact header h1{
 	font-weight: normal;
 	font-size: 4em;
