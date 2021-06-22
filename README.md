@@ -4,7 +4,7 @@ Luke Cole's Portolio Readme
 
 
 Here is a screenshot of the site.
-![image](.\images\site-demo.PNG)
+![image](\images\site-demo.PNG)
 
 
 The goal for this iteration was to make use of the advanced CSS tools such as media queries, pseudoelements, and flex boxes in order to create a responsive website.
